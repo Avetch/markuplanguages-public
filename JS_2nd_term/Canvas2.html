@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="200" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+int x0=0;  int y0=0;
+void setup() {
+  size(640, 400);
+}
+void draw() {
+  translate(width/2, height/2);
+  background(0);
+  stroke(80,170,240);
+  for (float i=-400;i<=400; i+=5) {
+    line (x0,y0,i+mouseX-width/2, mouseY-height/2-25+cos(i/33)*50);
+  }
+   if (mousePressed) {
+      x0 = mouseX-width/2; y0 = mouseY-height/2-25;
+   }
+}
+
+</script> 
+
+</body>
+</html>

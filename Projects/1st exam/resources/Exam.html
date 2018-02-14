@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+    body {
+        font: 24px Helvetica;
+        background: #999999;
+    }
+
+    #main {
+        min-height: 600px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: row;
+    }
+ 
+    #main > article {
+        margin: 4px;
+        padding: 5px;
+        border: 1px solid #cccc33;
+        border-radius: 7pt;
+        background: #dddd88;
+        flex: 3 1 60%;
+        order: 2;
+    }
+
+    #main > nav {
+        margin: 4px;
+        padding: 5px;
+        border: 1px solid #8888bb;
+        border-radius: 7pt;
+        background: #E9E9EB;
+        flex: 1 6 20%;
+        order: 1;
+    }
+    #webname{
+        position:absolute;
+        right:40%;
+    top:5%;
+    font-family: malandrin;
+    font-size:250%;
+    text-shadow: 250% 250% 250% orange;
+    color:white;
+}
+
+    #main > aside {
+        margin: 4px;
+        padding: 5px;
+        border: 1px solid #8888bb;
+        border-radius: 7pt;
+        background: #C0C0C0;
+        flex: 1 6 20%;
+        order: 3;
+    }
+ 
+    header {
+        display: block;
+        margin: 4px;
+        padding: 5px;
+        min-height: 200px;
+        border: 1px solid #eebb55;
+        border-radius: 7pt;
+        background: #ffeebb;
+        background-image:url(images/banner_huerta.jpg);
+    }
+    @font-face{
+    font-family:malandrin;
+    src: url(fonts/malandrin.ttf);
+}
+
+#logo1{
+    position: absolute;
+    margin-left:5%;
+    top:8%;
+box-shadow: 5px 5px 5px orangered;
+
+}
+#logo2{
+    position:absolute;
+   padding-top:1%;
+    right:10%;
+    top:5%;
+}
+    footer { display: block;
+        margin: 4px;
+        padding: 5px;
+        min-height: 100px;
+        border: 1px solid #eebb55;
+        border-radius: 7pt;
+        background: #ffeebb;
+ }
+ #Gallery{  
+     margin-left: 15%;
+     margin-top:3%;
+     opacity:0.25;
+     padding-bottom: 2%;
+ }
+ #Border1{
+     border-top: 5px solid green;
+     
+ }
+ .title1{
+     color:green;
+ }
+#Products{
+    border-top: 5px solid green;
+
+} 
+#Box{
+    position:absolute;
+    right: 14%;
+    top:58%;
+    border:3px solid orangered;
+    margin-left:5%;
+    background-color:orangered;
+    float:left;
+}
+#Tomato{
+    border-top: 5px solid green;
+  
+}
+#Text{
+   position:absolute;
+   right: 16%;
+top:90%;
+}
+#Joseba{
+    text-align:center;
+    padding-top:2%;
+}
+
+    /* Too narrow to support three columns */
+    @media all and (max-width: 640px) {
+        #main, #page {
+            flex-direction: column;
+        }
+
+        #main > article, #main > nav, #main > aside {
+        /* Return them to document order */
+            order: 0;
+        }
+  
+        #main > nav, #main > aside, header, footer {
+            min-height: 50px;
+            max-height: 50px;
+        }
+    }
+    </style>
+  </head>
+  <body>
+      
+    <header>
+        <div id=logo1>
+                <img src="images/logo1.png" width=100%>
+        </div>
+        <div id="webname">Vegetable Garden</div>
+        <div id= "logo2">
+        <img src="images/logo2.jpg" width=50%>
+        </div>
+        <ul>
+        <li>Intro</li>
+        <li>Products</li>
+        <li>Trics</li>
+        <li>Clients</li>
+        <li>Localization</li>
+            </ul>
+    </header>
+    <div id='main'>
+      <article>
+    <div id=Border1></div>
+    <div class=title1>
+   <h1>IMAGE GALLERY</h1>
+</div>
+<div id=Gallery>
+<img src="images/patata.jpg" width="13%">
+<img src="images/zanahoria.jpg" width="13%">
+<img src="images/lechuga.jpg" width="13%">
+<img src="images/pimiento.jpg" width="13%">
+<img src="images/tomate.jpg" width="13%">
+</div>
+
+<div id=Products>
+    <div class=title1>
+ <h1>PRODUCTS</h1>
+    </div>
+<ul>
+<li>POTATO</li>
+<li>CARROT</li>
+<li>LETTUCE</li>
+<li>PEPPER</li>
+<li>TOMATO</li>
+</ul>
+
+</div>
+<div id=Box>
+        <img src="images/patata.jpg" width="13%">
+        <img src="images/zanahoria.jpg" width="13%">
+        <img src="images/lechuga.jpg" width="13%"><br>
+        <img src="images/pimiento.jpg" width="13%">
+        <img src="images/tomate.jpg" width="13%">
+</div>
+<div id=Tomato>
+    <div class=title1>
+    <h1>Product of Week:Tomato</h1>
+</div>
+<div id=timg>
+<img src="images/tomate.jpg" width="13%">
+</div>
+<div id="Text">
+        Tomatoes contain all fouur major carotenoids:alpha- and beta- carotene, lutein and<br> lycopene. These carotenoids may have individual
+        benefits, but also have synergy as<br> a group (that is, they interact to provide health benefits).
+</div>
+</div>
+      </article>
+      <nav> 
+          <div id="login">
+        <fieldset>
+            <legend>Clientes</legend>
+        <form method="post" action="#">
+            <table>
+                <tr><td>User:</td><td><input type="text" name="username" placeholder="User"/></td></tr>
+                <tr><td>Password:</td><td><input type="password" name="password" placeholder="Password"/></td></tr>
+                <tr>
+                    <td><input type="submit" value="Log in"/></td>
+                </tr>
+            </table>
+        </form>
+            </fieldset>
+            <fieldset>
+                    <legend>Order</legend>
+                <form method="post" action="#">
+                    <table>
+                        <tr><td>Product:</td><td><input type="text" name="Product" placeholder="Select a product"/></td></tr>
+                        <tr><td>Amount:</td><td><input type="password" name="Amount" placeholder="Select amount"/></td></tr>
+                        <tr>
+                            <td><input type="submit" value="Log in"/></td>
+                        </tr>
+                    </table>
+                </form>
+                    </fieldset>
+    </div></nav>
+      
+    </div>
+    <footer>
+        <div id=Joseba>Joseba Mitxeleba Iturbe - @ 2017</div>
+    </footer>
+  </body>
+</html>

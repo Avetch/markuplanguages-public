@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<style>
+.JS{
+    background-image: url(Pacman.jpg);  
+    border-style:solid;
+    position:absolute;
+    left: 500px;
+    top:100px;  
+    width:60px;
+    height:60px;   
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;        
+    }
+    .element  {
+            background-color: coral;
+            border-style: solid;
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 50px;
+            border-radius: 50px;          
+            position: absolute;
+            left: 100px;
+            top: 150px;
+            width: 10px;
+            height: 10px;          
+        };
+    </style>    
+</head>
+<body>
+<div id="Square" class="JS" draggable="true">
+    </div>   
+    <div id="main">
+            <div id="elementID" class="element"></div>
+        </div>
+        <h2 id='RT'></h2>
+    <script>
+        console.log("Hi");
+        //init
+document.getElementById("Square").style.left = "50px";
+document.getElementById("Square").style.top = "50px";
+
+var x = 50;
+var y = 50;
+var dx = 20;
+var dy = 30;
+document.addEventListener('keydown', function(event) {
+console.log(event.keyCode);
+if (event.keyCode == 39) {// ->key//
+    x = x + dx;
+}
+ if (event.keyCode == 37) {// ->key//
+    x= x - dx
+ }
+ if (event.keyCode == 40) {// ->key//
+    y = y + dy;
+ }
+ if (event.keyCode == 38) {// ->key//
+    y = y - dy;
+ }
+document.getElementById("Square").style.left = x + 'px';
+document.getElementById("Square").style.top = y + 'px';
+
+}); 
+//This belongs to the drag & drop part;
+
+var element = document.getElementById("Square");
+        element.addEventListener('dragstart', function(event) {
+            console.log('dragstart');
+            console.log(event);
+            // this: elementua
+            this.style.opacity = '0.4';  // this / e.target is the source node.
+            //document.getElementById("elementID").setAttribute("initialX", event.clientX);
+            this.setAttribute("initialX", event.clientX);
+            this.setAttribute("initialY", event.clientY);
+        });
+        element.addEventListener('drag', function(event) {
+            // console.log('drag');
+            // console.log(event);
+        });
+        element.addEventListener('dragenter', function(event) {
+            // console.log('dragenter');
+            // console.log(event);
+        });
+        element.addEventListener('dragleave', function(event) {
+            // console.log('dragleave');
+            // console.log(event);
+        });
+        element.addEventListener('dragover', function(event) {
+            // console.log('dragover');
+            // console.log(event);
+        });
+        element.addEventListener('drop', function(event) {
+            // console.log('drop');
+            // console.log(event);
+        });
+        element.addEventListener('dragend', function(event) {
+            console.log('dragend');
+            console.log(event);
+            //
+            // document.getElementById("elementID").style.left = "50px";
+    
+            var x = event.clientX - Number(this.getAttribute("initialX"));
+            var y = event.clientY - Number(this.getAttribute("initialY"));
+            this.style.left = event.target.offsetLeft + x + "px";
+            this.style.top = event.target.offsetTop + y + "px";
+            
+            this.style.opacity = '1';            
+        });
+        element.addEventListener('dragexit', function(event) {
+            console.log('dragexit');
+            console.log(event);
+        });
+// Here ends the drag & drop part.
+//Here starts the part where circles are multiplied
+function clone() {
+    var new_node = document.getElementById("elementID").cloneNode(true);
+    // new id
+    new_node.id = "element" + new Date().getTime();
+    // random color
+    new_node.style.background = getRandomColor();
+    // Number(s.substr(0,s.length-2)) : "100px"->100
+    var left = Number(new_node.style.left.substr(0,new_node.style.left.length-2));
+    var top = Number(new_node.style.top.substr(0,new_node.style.top.length-2));
+    left = left + Math.random() * document.documentElement.clientWidth;
+    top = top + Math.random() * document.documentElement.clientHeight;
+    new_node.style.left = left + 'px';
+    new_node.style.top = top + 'px';
+    document.getElementById("main").appendChild(new_node);
+}
+// Random color for each color are requested
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+// main
+for (var i = 0; i < 10; i++) {
+    clone();
+} 
+// This belongs to the timer part
+ /* Total time we have to complete the game */
+ var Remaining=20;
+    /* The url we want the page to go once the time finishes */
+    var url="ASP.html";
+ 
+    function updateclock()
+    {
+        document.getElementById('RT').innerHTML = "Game finishes in  "+Remaining+ " seconds";
+ 
+        if(Remaining==0)
+        {
+            window.location=url;
+        }else{
+            /* We rest 1 second */
+            Remaining-=1;
+            /* The function is executed everytime one second elapses*/
+            setTimeout("updateclock()",1000);
+        }
+    }
+    window.onload=updateclock;
+    
+    function collision (p1x, p1y, r1, p2x, p2y, r2) {
+        var a;
+        var x;
+        var y;
+    
+        a = r1 + r2;
+        x = p1x - p2x;
+        y = p1y - p2y;
+    
+        if ( a > Math.sqrt( (x*x) + (y*y) ) ) {
+            return true;
+        } else {
+            return false;
+        }   
+    }
+    var collision = collision(5, 500, 10, 1000, 1500, 1500);
+  
+    </script>
+</body>
+</html>

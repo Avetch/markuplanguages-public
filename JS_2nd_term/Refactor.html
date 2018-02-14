@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var day = "";
+    var actualday = new Date().getDay();
+    if (actualday == 0) {
+    day = "sunday"
+    } else if (actualday == 1) {
+    day = "monday"
+    } else if (actualday == 2) {
+    day="Tuesday"    
+    } else if (actualday == 3) {
+    day="Wednesday"    
+    } else if (actualday == 4){
+    day="Thursay"    
+    }
+    document.getElementById("demo").innerHTML = "Today is " + day;
+    </script>
+</body>
+</html>

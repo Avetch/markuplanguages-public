@@ -1,0 +1,36 @@
+
+<head>
+    <script language="JavaScript">
+ 
+    /* Total time we have to complete the game */
+    var Remaining=3;
+    /* The url we want the page to go once the time finishes */
+    var url="ASP.html";
+ 
+    function updateclock()
+    {
+        document.getElementById('RT').innerHTML = "Game finishes in  "+Remaining+"seconds";
+ 
+        if(Remaining==0)
+        {
+            window.location=url;
+        }else{
+            /* We rest 1 second */
+            Remaining-=1;
+            /* The function is executed everytime one second elapses*/
+            setTimeout("updateclock()",1000);
+        }
+    }
+ 
+    window.onload=updateclock;
+ 
+    </script>
+</head>
+ 
+<body>
+ 
+
+<h2 id='RT'></h2>
+ 
+</body>
+</html>

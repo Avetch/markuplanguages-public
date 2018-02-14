@@ -1,0 +1,151 @@
+body{
+    background-color: #cbcbcb;
+}
+
+#container{
+    width:960px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    background-color: beige;
+    margin: auto;
+}
+
+header{
+    width:100%;
+    background-image: url(../images/banner.jpg);
+    background-size: 100% 100%;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: 1px solid black;
+    height: 125px;
+}
+
+#logo{
+    width: 100px;
+    height: 100px;
+    background-image: url(../images/logo.jpg);
+    background-size: 100px 100px;
+    border-radius: 5px;
+    border: 1px solid black;
+    float:left;
+    margin-left: 1.5%;
+    margin-top:1.5%;
+}
+@font-face{
+    font-family:sports;
+    src: url(../fonts/sports.ttf);
+}
+
+#webname{
+    float:left;
+    width:55%;
+    margin-left: 3%;
+    margin-top:3.5%;
+    font-family: sports;
+    font-size: 50px;
+    text-align: center;
+    color: #454545;
+    -webkit-text-stroke: 2px black;
+    text-shadow: 5px 5px 5px grey;
+}
+
+#login{
+    float: left;
+    width: 7%;
+}
+
+#main{
+    clear: both;
+    float: left;
+    width: 75%;
+   /* border:1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px grey;
+    background-color: #c9c8c7;
+    */
+    margin-left: 1.5%;
+    margin-top:1.5%;
+}
+
+aside{
+    float:right;
+    width: 20%;
+    margin-right: 1.5%;
+  
+}
+
+nav, .box{
+     border:1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px grey;
+    background-color: #c9c8c7;
+    margin-right: 1.5%;
+    margin-top:7%;
+}
+
+section{
+    
+    width:100%;
+    margin-bottom:1%;
+    border:1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px grey;
+    background-color: #c9c8c7;
+}
+
+section p,h1,h2,a{
+    margin-left: 2%;
+    text-align: justify;
+}
+
+section p{
+    width: 95%;
+}
+
+html > body > div#container > div#main > section > h1 {
+    font-family: sports;
+}
+
+html > body > div#container > aside > nav > h2{
+    font-family: sports;
+}
+
+html > body > div#container > aside > div.box > h2{
+    font-family: sports;
+}
+section img{
+    border:1px solid black;
+    width:95%;
+    height: 150px;
+    margin-left:2.5%;
+}
+
+h1{
+    font:sports;
+}
+
+aside h2{
+    margin-left: 2%;
+}
+
+aside ul li {
+    
+    margin-left: -10%;
+    margin-bottom: 10px;
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+a:hover{
+    color:red;
+    font-style: italic;
+}
+footer{
+    clear: both;
+    text-align: center;
+    padding-top: 2%;
+}
+

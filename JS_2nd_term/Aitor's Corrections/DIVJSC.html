@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<style>
+.JS{
+    width:100px;
+    height:100px;
+    background-color:red;   
+    border-style:solid;
+    position:absolute;
+    left: 500px;
+    top:100px;  
+    width:100px;
+    height:100px;   
+    }
+
+    </style>    
+</head>
+<body>
+<div id="ElementId" class="JS">
+    Lmao
+    </div>   
+    
+    <script>
+        console.log("Hi");
+        //init
+document.getElementById("ElementId").style.left = "50px";
+document.getElementById("ElementId").style.top = "50px";
+
+var x = 50;
+var y = 50;
+var dx = 20;
+var dy = 30;
+document.addEventListener('keydown', function(event) {
+console.log(event.keyCode);
+if (event.keyCode == 39) {// ->key//
+    x = x + dx;
+}
+ if (event.keyCode == 37) {// ->key//
+    x= x - dx
+ }
+ if (event.keyCode == 40) {// ->key//
+    y = y + dy;
+ }
+ if (event.keyCode == 38) {// ->key//
+    y = y - dy;
+ }
+document.getElementById("ElementId").style.left = x + 'px';
+document.getElementById("ElementId").style.top = y + 'px';
+
+});
+    </script>
+</body>
+</html>
