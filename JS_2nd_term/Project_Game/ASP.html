@@ -67,6 +67,8 @@ if (event.keyCode == 39) {// ->key//
 document.getElementById("Square").style.left = x + 'px';
 document.getElementById("Square").style.top = y + 'px';
 
+detectCollisionWithAllElements();
+
 }); 
 //This belongs to the drag & drop part;
 
@@ -176,16 +178,16 @@ for (var i = 0; i < 10; i++) {
     smcs = document.querySelectorAll(".element");
     smcs.forEach(function(Pum){
             // https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
-            var big = {x: x, y: y, width: 60, height: 60}
+            var big = {x: x, y: y, width: 100, height: 100}
             var small = {x: element.offsetLeft, y: element.offsetTop, width: element.offsetWidth, height: element.offsetHeight}
-            if (rect1.x < rect2.x + rect2.width &&
-            rect1.x + rect1.width > rect2.x &&
-            rect1.y < rect2.y + rect2.height &&
-            rect1.height + rect1.y > rect2.y) {
+            if (big.x < small.x + small.width &&
+            big.x + big.width > small.x &&
+            big.y < small.y + small.height &&
+            big.height + big.y > small.y) {
                 // collision detected!
                 console.log("talka!!");
                 // https://www.sitepoint.com/five-ways-to-hide-elements-in-css/
-                element.style.visibility = "hidden";
+                
             }
         
     });
