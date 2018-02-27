@@ -178,7 +178,7 @@ for (var i = 0; i < 10; i++) {
     smcs = document.querySelectorAll(".element");
     smcs.forEach(function(Pum){
             // https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
-            var big = {x: x, y: y, width: 100, height: 100}
+            var big = {x: x, y: y, width: 60, height: 60}
             var small = {x: element.offsetLeft, y: element.offsetTop, width: element.offsetWidth, height: element.offsetHeight}
             if (big.x < small.x + small.width &&
             big.x + big.width > small.x &&
@@ -187,7 +187,7 @@ for (var i = 0; i < 10; i++) {
                 // collision detected!
                 console.log("talka!!");
                 // https://www.sitepoint.com/five-ways-to-hide-elements-in-css/
-                
+                element.style.visivility = "hidden";
             }
         
     });
