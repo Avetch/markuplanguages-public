@@ -46,8 +46,7 @@
 document.getElementById("Square").style.left = "50px";
 document.getElementById("Square").style.top = "50px";
 
-var bigW = document.getElementById("Square").offsetWidth;
-    bigH = document.getElementById("Square").offsetHeight;
+var bigCircle = document.getElementById("Square");
 
 var x = 50;
 var y = 50;
@@ -154,7 +153,7 @@ for (var i = 0; i < 10; i++) {
 } 
 // This belongs to the timer part
  /* Total time we have to complete the game */
- var Remaining=60;
+ var Remaining=600;
     /* The url we want the page to go once the time finishes */
     var url="ASP.html";
  
@@ -181,7 +180,7 @@ for (var i = 0; i < 10; i++) {
     smcs = document.querySelectorAll(".element");
     smcs.forEach(function(Pum){
             // https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
-            var big = {x: x, y: y, width:bigW, height: bigH}
+            var big = {x: x, y: y, width: bigCircle.offsetWidth, height: bigCircle.offsetHeight}
             var small = {x: Pum.offsetLeft, y: Pum.offsetTop, width: Pum.offsetWidth, height: Pum.offsetHeight}
             if (big.x < small.x + small.width &&
             big.x + big.width > small.x &&
@@ -190,7 +189,8 @@ for (var i = 0; i < 10; i++) {
                 // collision detected!
                 console.log("talka!!");
                 // https://www.sitepoint.com/five-ways-to-hide-elements-in-css/
-                Pum.style.visibility = "hidden";
+                Pum.style.display = "none";
+                Increase();
             }
         
     });
@@ -198,14 +198,13 @@ for (var i = 0; i < 10; i++) {
 
 function Increase(){
 
-var Eaten = {x: x, y: y, width:bigW, height: bigH};
+var Tsquare = document.getElementById("Square");
 
-if(detectCollisionWithAllElements()) {
-Eaten = {width:bigW + "10px", height:bigH + "10px"}
+    Tsquare.style.width = Tsquare.offsetWidth + 10 + "px";
+    Tsquare.style.height = Tsquare.offsetHeight + 10 + "px";
 
 }
-}
-Increase();
+
     </script>
 </body>
 </html>
