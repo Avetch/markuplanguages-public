@@ -154,7 +154,7 @@ for (var i = 0; i < 10; i++) {
 } 
 // This belongs to the timer part
  /* Total time we have to complete the game */
- var Remaining=13;
+ var Remaining=60;
     /* The url we want the page to go once the time finishes */
     var url="ASP.html";
  
@@ -195,6 +195,17 @@ for (var i = 0; i < 10; i++) {
         
     });
 }
+
+function Increase(){
+
+var Eaten = {x: x, y: y, width:bigW, height: bigH};
+
+if(detectCollisionWithAllElements()) {
+Eaten = {width:bigW + "10px", height:bigH + "10px"}
+
+}
+}
+Increase();
     </script>
 </body>
 </html>

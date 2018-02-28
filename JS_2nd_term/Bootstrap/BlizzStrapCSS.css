@@ -172,6 +172,14 @@ a:hover {
 a:active {
     color: blue;
 }
+/*This is the CSS of the bootstrap part*/
+
+
+.container {
+
+    max-width: 100px;
+    height: 100px;
+}
 /* Too narrow to support three columns */
 @media all and (max-width: 640px) {
     #main, #page, #top {
