@@ -1,0 +1,104 @@
+<!--
+http://leafletjs.com/examples/quick-start/
+https://asmaloney.com/2014/01/code/creating-an-interactive-map-with-leaflet-and-openstreetmap/    
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+    <title>Leaflet Maps</title>
+</head>
+<body>
+
+<style>
+html, body{
+  height:90%;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+}
+#mapid { 
+    /*height: 180px;*/
+    height: 100%; 
+}    
+</style>
+
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+crossorigin=""></script>
+
+<div id="main">
+    <div id="mapid"></div>        
+</div>
+
+<script>
+var mymap = L.map('mapid').setView([43.327355, -1.970576], 18);
+
+L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    subdomains: ['a','b','c']
+}).addTo( mymap );
+
+/*
+var circle = L.circle([43.327355, -1.970576], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.1,
+    radius: 500
+}).addTo(mymap);
+*/
+
+// http://leafletjs.com/reference-1.3.0.html#polygon
+var polygon = L.polygon([
+    [43.327086, -1.971043],
+    [43.327765, -1.970705],
+    [43.327628, -1.970222],
+    [43.327527, -1.97026],
+    [43.327351, -1.97005],
+    [43.327113, -1.97019],
+    [43.327027, -1.970506],
+    [43.326949, -1.970549]    
+]).addTo(mymap);
+
+//circle.bindPopup("I am a circle.");
+polygon.bindPopup("Zubiri-Manteo BHI.");
+
+
+var popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(mymap);
+}
+
+mymap.on('click', onMapClick);
+
+// path
+
+var pointA = new L.LatLng(43.327472, -1.970989);
+var pointB = new L.LatLng(43.32284, -1.984786);
+var pointList = [pointA, pointB];
+
+var firstpolyline = new L.Polyline(pointList, {
+    color: 'red',
+    weight: 3,
+    opacity: 0.5,
+    smoothFactor: 1
+});
+firstpolyline.addTo(mymap);
+
+</script>
+
+</body>
+</html>

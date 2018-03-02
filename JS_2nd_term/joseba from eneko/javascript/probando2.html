@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>The Number Guesser</title>
+<script>
+var max=100             
+var min=1              
+var cGuess=50;        
+var Guesses=1;
+   
+    function Guess(n){		 
+  if(n==1){		  
+   min=cGuess		
+  }
+  else{			
+   max=cGuess
+  }
+  Guesses=Guesses+1	
+  cGuess=Math.floor((max+min)/2) 
+  Guesser.value=cGuess		
+  guesses.value=Guesses		
+}
+    function Start(){		 
+  max=100			
+  min=1				
+  cGuess=50;
+  Guesses=1;
+  Guesser.value=cGuess
+  guesses.value=Guesses
+}
+    function win(){
+        alert("You Winner!!!!")
+        
+        
+    }
+   
+    </script>
+</head>
+
+<body  id=Start()>
+    <center>
+    <h1>Number Guesser</h1>
+
+   
+   
+      <p>Think of a number between 0 and 99. Now the computer is going to guess it in 7 or less     guesses.</p>
+        
+ 
+ 
+  
+  
+   
+     		
+      
+ 
+ 
+
+    
+     <h3>Computer Guess:</h3>
+    
+    <table>
+   <tr>
+    <input value=50 id=Guesser size=7>	
+       </tr>
+      
+ 
+ 
+  
+   <tr>
+       <td>
+    <input type=button value=Higher onclick=Guess(1)>		
+    
+       </td>
+   <td>
+    <input type=button value=Smaller onclick=Guess(2)>		
+       </td>
+ 
+ 
+  
+   <td>
+    <input type=button value="Start Again" onclick=Start()>	
+       </td>
+          <td>
+     
+     <input type=button value="You did it" onclick=win()>
+       </td>
+        </tr>
+        </table>
+        
+         <h3>Tries</h3>
+      
+  
+   
+    <input value=1 id=guesses size=7>
+         
+
+    
+   </center> 
+</body>
+</html>

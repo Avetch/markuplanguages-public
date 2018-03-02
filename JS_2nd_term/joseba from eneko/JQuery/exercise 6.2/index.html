@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise 6.2</title>
+        <style>
+            li{
+                list-style: none;
+                background-color: yellow;
+                width: 200px;
+                height: 50px;
+                
+                
+            }
+            ul.test, ul.test2{
+                background-color:green;
+                height: 70px;
+            }
+        
+        
+        </style>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+                $("#first").click(function(){
+                $("ul.test").animate({height: 'toggle',
+                                     width: 'toggle'});
+                    
+                });
+                
+            });
+            
+            $(document).ready(function(){
+                $("#second").click(function(){
+                $("ul.test2").animate({height: 'toggle',
+                                      width: 'toggle'});
+                    
+                });
+                
+            });
+        
+        </script>
+    </head>
+    <body>
+        <ul style="float: left">
+            <li id="first">Menua 1</li>
+            <ul class="test">Azpimenua1</ul>
+            <ul class="test">Azpimenua2</ul>
+            <ul class="test">Azpimenua3</ul>
+        
+        </ul>
+        <ul style="float: left">
+            <li id="second">Menua 2</li>
+            <ul class="test2">Azpimenua1</ul>
+            <ul class="test2">Azpimenua2</ul>
+            <ul class="test2">Azpimenua3</ul>
+        
+        </ul>
+    
+    </body>
+
+
+</html>

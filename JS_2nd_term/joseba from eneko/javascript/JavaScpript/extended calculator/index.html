@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Extended calculator</title>
+        <script type="text/javascript">
+            
+            function reset(){
+                document.getElementById("texto").reset();
+            }
+            function calculate(){
+                
+                var  caculate= "Number";
+                document.getElementById("calculate").innerHTML = Number; 
+
+                
+            }
+            function add_to_expresion(){
+                var str = "".replace(add_to_expresion, '');
+            }
+        
+        
+        </script>
+    
+    </head>
+    
+    
+    
+    <body>
+
+<form id="texto">
+    <input type="text" value"" onclick="add_to_expresion"/>
+<p>
+
+<input type="button" class="largo" value="C" onclick="reset"/>
+</p>
+<p>
+<input type="button" value="7" onclick="add_to_expresion"/>
+<input type="button" value="8" onclick="add_to_expresion"/>
+<input type="button" value="9" onclick="add_to_expresion"/>
+<input type="button" value="/"  onclick="add_to_expresion"/>
+
+</p>
+<p>
+<input type="button" value="4" onclick="add_to_expresion"/>
+<input type="button" value="5" onclick="add_to_expresion"/>
+<input type="button" value="6" onclick="add_to_expresion"/>
+<input type="button" value="*" onclick="add_to_expresion"/>
+
+</p>
+<p>
+<input type="button" value="1" onclick="add_to_expresion"/>
+<input type="button" value="2" onclick="add_to_expresion"/>
+<input type="button" value="3" onclick="add_to_expresion"/>
+<input type="button" value="-" onclick="add_to_expresion"/>
+
+</p>
+<p>
+<input type="button" value="0" onclick="add_to_expresion"/>
+<input type="button" value="." onclick="add_to_expresion"/>
+<input type="button" value="+" onclick="add_to_expresion"/>
+<input type="button" value="=" onclikc="calculate"/>
+</p>
+        </form>
+        
+    
+    </body>
+</html>

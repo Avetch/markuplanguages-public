@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <script src="js/jquery-3.1.1.js"></script>
+        <script>
+            $(document).ready(function(){
+               $(".toplevel").click(function(){
+                  $(".secondlevel").slideToggle(); 
+               }); 
+            });
+        </script>
+        
+         <style>
+            ul{
+                 display: block;
+                list-style: none;
+    width: 400px;
+    float: left;
+    padding-top: 15px;
+    font-family: myfont;
+    color: black;
+            }
+            .secondlevel{
+                  display: none;
+    width: 100px;
+    margin-top: 17px;
+    margin-left: -15px;
+     padding-bottom: 10px;
+    background-color: #807e7e;
+    width: 300px;
+    margin-left: -40px;
+    padding-left: -10px;
+            }
+        </style>
+    </head>
+    <body>
+          <nav>
+            <ul>
+                <li class="toplevel">Black Jack Games</li>
+                <ul class="secondlevel">
+                    <li>Black Jack Games v1.0</li>
+                    <li>Black Jack Games v2.0</li>
+                </ul>
+            </ul>
+            <ul>
+                 <li class="toplevel">Jackpot Games</li>
+                <ul class="secondlevel">
+                    <li>Jackpot Games v1.0</li>
+                    <li>Jackpot Games v2.0</li>
+                </ul>
+            </ul>
+            <ul>
+                 <li class="toplevel">RSP Games</li>
+                <ul class="secondlevel">
+                    <li>RSP Games v1.0</li>
+                    <li>RSP Games v2.0</li>
+                </ul>
+            </ul>
+        </nav>
+    </body>
+</html>

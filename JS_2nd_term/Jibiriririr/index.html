@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exam</title>
+        <meta charset="utf-8">
+        <link href="styles/exam.css" type="text/css" rel="stylesheet">
+        <script src="js/jquery-3.1.1.js"></script>
+        <script>
+            $(document).ready(function(){
+               $(".toplevel").click(function(){
+                  $(".secondlevel").slideToggle(); 
+               }); 
+            });
+            
+                //Global variables
+                
+            var pcounter=0;
+            var ccounter=0;
+            var pstop=0;
+            var cstop=0;
+            
+                function draw_card(who){
+                    var card=Math.floor(Math.random()*10)+1;
+                    if(who=='player' && pstop==0){
+                        pcounter=pcounter+card;
+                        document.getElementById("playercard").innerHTML="<img src='images/"+card+".png' width='250px;' height='350px;'/>";
+                          document.getElementById("playercounter").innerHTML="<h2>"+pcounter+"</h2>";
+                         };
+                        if(pcounter>=21){
+                            pstop=1;
+                        };
+                   
+                     if(who=='computer' && cstop==0){
+                        ccounter=ccounter+card;
+                        document.getElementById("computercard").innerHTML="<img src='images/"+card+".png' width='250px;' height='350px;'/>";
+                             document.getElementById("computercounter").innerHTML=ccounter;
+                        if(ccounter>=21){
+                        cstop=1;
+                        }
+                };
+                       function stop(who){
+                    if (who=='player'){
+                        pstop=1;
+                    }
+                    else{
+                        cstop=1;
+                    }
+                };
+                    //check the winner
+                    if(pcounter<=21 && ccounter<pcounter && pstop==1 && cstop==1){
+                        document.getElementById("Winner").innerHTML="<h2>Player wins!</h2>";
+                    }
+                    else{
+                      if(ccounter<=21 && pcounter<ccounter && pstop==1 && cstop==1){
+                        document.getElementById("Winner").innerHTML="<h2>Computer wins!</h2>";  
+                    }
+                    };    
+             
+                };
+        </script>
+        
+        <style>
+            ul{
+                float: left;
+            }
+            .secondlevel{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li class="toplevel">Black Jack Games</li>
+                <ul class="secondlevel">
+                    <li>Black Jack Games v1.0</li>
+                    <li>Black Jack Games v2.0</li>
+                </ul>
+            </ul>
+            <ul>
+                 <li class="toplevel">Jackpot Games</li>
+                <ul class="secondlevel">
+                    <li>Jackpot Games v1.0</li>
+                    <li>Jackpot Games v2.0</li>
+                </ul>
+            </ul>
+            <ul>
+                 <li class="toplevel">RSP Games</li>
+                <ul class="secondlevel">
+                    <li>RSP Games v1.0</li>
+                    <li>RSP Games v2.0</li>
+                </ul>
+            </ul>
+        </nav>
+        <section>
+            <table border="1">
+                <tr>
+                     <td id="playercounter">0</td>
+                     <td id="playercard"><img src="images/card-back.jpg" width="250px;" height="350px;"></td>
+                     <td><img src="images/vs.jpg"  width="250px;" height="350px;"></td>
+                     <td id="computercard"><img src="images/card-back.jpg"  width="250px;" height="350px;"></td>
+                     <td id="computercounter">0</td>
+                </tr>
+                <tr>
+                    <td id="Winner"></td>
+                     <td><input type="button" value="Draw Card" onclick="draw_card('player')">
+                        <input type="button" value="Stop" onclick="stop('player')">
+                    </td>
+                    <td id="Winner"></td>
+                    <td><input type="button" value="Draw Card" onclick="draw_card('computer')">
+                        <input type="button" value="Stop" onclick="stop('computer')"></td>
+                  <td></td>
+                    
+                </tr>
+            </table>
+        </section>
+    </body>
+</html>

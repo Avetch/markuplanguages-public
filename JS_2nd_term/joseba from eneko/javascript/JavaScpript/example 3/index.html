@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise 3</title>
+        <script type="text/javascript">
+            
+            function add_new_element(p_or_img){
+             if(p_or_img=="p"){
+              var element = document.createElement("p");
+              var text = document.createTextNode("this is the new text");
+                element.appendChild(text);
+                 
+             }  
+                else{
+                   var element = document.createElement("img");
+                   element.setAttribute("src","images/killzone.jpg");
+                    element.setAttribute("width","100px");
+                    element.setAttribute("height","100px")
+                }
+                document.getElementById("box").appendChild(element);
+            }
+            
+        
+        
+        </script>
+    </head>
+    <body>
+        <input type="button" value="New paragraph" onclick="add_new_element('p')"/>
+        <input type="button" value="New images" onclick="add_new_element('img')"/>
+        <div id=box>
+            
+        
+        </div>
+    </body>
+</html>

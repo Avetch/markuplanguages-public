@@ -1,0 +1,104 @@
+body {
+    margin: 0px;
+    background-image: url(../images/woodpattern.jpg);
+}
+@font-face {
+    font-family: myfont;
+    src: url(../fonts/myfont.ttf);
+}
+header{
+    background-color: #1A1A1A;
+    width: 100%;
+    height: 110px;
+    position: fixed;
+    top: 0px;
+}
+footer {
+    background-color: #1A1A1A;
+    width: 100%;
+    height: 110px;
+    height: 25px;
+    position: fixed;
+    bottom:0px;
+color:white;
+}
+nav {
+    background-color: #262626;
+    width: 100%;
+    height: 50px;
+    margin-top: -3px;
+    position: fixed;
+    top: 110px;
+}
+#logo {
+    float: left;
+    background-image: url(../images/logo.png);
+    height: 90px;
+    width: 90px;
+    background-size: 90px 90px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#title {
+    float: left;
+    font-family: myfont;
+    font-size: 60px;
+    color: white;
+    margin-top: 25px;
+    margin-left: 30%;
+}
+
+
+
+
+
+a {
+    text-decoration: none;
+}
+
+
+section{
+ position: fixed;
+    top: 160px;
+    z-index: -100;
+}
+
+
+
+
+
+nav li {
+    display: block;
+    list-style: none;
+    width: 400px;
+    float: left;
+    padding-top: 15px;
+    font-family: myfont;
+    color: white;
+}
+.sub-menu {
+    display: none;
+    width: 100px;
+    margin-top: 17px;
+    margin-left: -15px;
+    
+}
+.sub-menu li {
+    padding-bottom: 10px;
+    background-color: #807e7e;
+    width: 300px;
+    margin-left: -40px;
+    padding-left: -10px;
+}
+
+
+
+.link {
+    float: left;
+    margin-top: -15px;
+}
+
+a {
+    text-decoration: none;
+}
+

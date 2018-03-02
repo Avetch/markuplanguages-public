@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survey</title>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <style>
+            
+        
+        
+        </style>
+        <script type="text/javascript">
+            var counter=0;
+            
+    $(document).ready(function(){
+         if 
+        ($("input[value='check']").click(function(){
+            $(this).parent().find("input[value='yess']").is(":checked");{
+            $(this).parent().hide();
+             $(this).parent().next().animate({
+                        height: 'toggle'
+             }
+                                             )}}));
+         
+    
+             else 
+          $("input[value='check']").click(function(){  
+        $(".checkno").next().animate({height: "toggle"});
+            
+         
+    });
+    });
+            
+           
+        </script>
+    
+    </head>
+    
+    <body>
+        <h2>Question 1: Number of employees in Apple?</h2>
+        <table>
+                <tr>
+                <td>
+                <input type="radio"  value="yess" class="incorrect">1    
+                </td>
+                </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="correct">115000   
+                </td>
+                 </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="incorrect"> Apple  doesn´t exist 
+                </td>
+                 </tr>
+                <tr><td><input type="button" value="check"></td></tr>
+            
+            
+            </table>
+        
+        <div class="checkyes" style="display: none">
+            <h1>CORRECT</h1>
+        
+        </div>
+        
+        <div class="checkno" style="display: none">
+            <h1>INCORRECT</h1>
+        </div>
+        <div>
+            <h2>Question 2: When die Napoleon?</h2>
+            <table>
+                <tr>
+                <td>
+                <input type="radio"  value="yess" class="incorrect" >1600    
+                </td>
+                </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="correct">1821   
+                </td>
+                 </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="incorrect">1601 
+                </td>
+                 </tr>
+                
+            <tr><td><input type="button" value="check"></td></tr>
+            
+            </table>
+            </div>
+        <div class="checkyes" style="display: none">
+            <h1>CORRECT</h1>
+        
+        </div>
+        
+        <div class="checkno" style="display: none">
+            <h1>INCORRECT</h1>
+        </div>
+        <div>
+            <h2>Question 3: Best OS?</h2>
+            <table>
+                <tr>
+                <td>
+                <input type="radio"  value="yess" class="correct">Windows    
+                </td>
+                </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="incorrect">Linux    
+                </td>
+                 </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="incorrect">Android  
+                </td>
+                 </tr>
+                
+            <tr><td><input type="button" value="check"></td></tr>
+            
+            </table>
+            </div>
+        <div class="checkyes" style="display: none">
+            <h1>CORRECT</h1>
+        
+        </div>
+        
+        <div class="checkno" style="display: none">
+            <h1>INCORRECT</h1>
+        </div>
+        <div>
+            <h2>Question 4: Homer´s son is?</h2>
+            <table>
+                <tr>
+                <td>
+                <input type="radio"  value="yess" class="incorrect">Apu    
+                </td>
+                </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="correct">Bart   
+                </td>
+                 </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="incorrect">Moe  
+                </td>
+                 </tr>
+                
+            <tr><td><input type="button" value="check"></td></tr>
+            
+            </table>
+        </div>
+        <div class="checkyes" style="display: none">
+            <h1>CORRECT</h1>
+        
+        </div>
+        
+        <div class="checkno" style="display: none">
+            <h1>INCORRECT</h1>
+        </div>
+        <div>
+            <h2>Question 5: We cant...</h2>
+            <table>
+                <tr>
+                <td>
+                <input type="radio"  value="yess" class="incorrect">Run    
+                </td>
+                </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="incorrect">die    
+                </td>
+                 </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="correct">Fly  
+                    </td>
+                 </tr>
+                
+            <tr><td><input type="button" value="check"></td></tr>
+            
+            </table>
+    </div>
+        <div class="checkyes" style="display: none">
+            <h1>CORRECT</h1>
+        
+        </div>
+        
+        <div class="checkno" style="display: none">
+            <h1>INCORRECT</h1>
+        </div>
+        <div>
+            <h2>Question 6: Pablo Escobar was from</h2>
+            <table>
+                <tr>
+                <td>
+                <input type="radio"  value="yess" class="correct">Colombia   
+                </td>
+                </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="incorrect">Chile    
+                </td>
+                 </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="incorrect">Germany  
+                </td>
+                 </tr>
+                
+            <tr><td><input type="button" value="check"></td></tr>
+            
+            </table>
+</div>
+        <div class="checkyes" style="display: none">
+            <h1>CORRECT</h1>
+        
+        </div>
+        
+        <div class="checkno" style="display: none">
+            <h1>INCORRECT</h1>
+        </div>
+        <div>
+            <h2>Question 7: Is this Question 7?</h2>
+            <table>
+                <tr>
+                <td>
+                <input type="radio"  value="yess" class="correct">yes    
+                </td>
+                </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="incorrect">no    
+                </td>
+                 </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="incorrect">maybe 
+                </td>
+                 </tr>
+                
+            <tr><td><input type="button" value="check"></td></tr>
+            
+            </table>
+</div>
+        <div class="checkyes" style="display: none">
+            <h1>CORRECT</h1>
+        
+        </div>
+        
+        <div class="checkno" style="display: none">
+            <h1>INCORRECT</h1>
+        </div>
+        <div>
+            <h2>Question 8: Where die Paul Walker?</h2>
+            <table>
+                <tr>
+                <td>
+                <input type="radio"  value="yess" class="correct">Valencia, California   
+                </td>
+                </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="incorrect">New York    
+                </td>
+                 </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="incorrect">Canada  
+                </td>
+                 </tr>
+                
+            <tr><td><input type="button" value="check"></td></tr>
+            
+            </table>
+</div>
+        <div class="checkyes" style="display: none">
+            <h1>CORRECT</h1>
+        
+        </div>
+        
+        <div class="checkno" style="display: none">
+            <h1>INCORRECT</h1>
+        </div>
+        <div>
+            <h2>Question 9: World´s fastest car is?</h2>
+            <table>
+                <tr>
+                <td>
+                <input type="radio"  value="yess" class="correct">Hennessey Venom GT    
+                </td>
+                </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="incorrect">Ford focus C-max    
+                </td>
+                 </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="incorrect">Seat 600  
+                </td>
+                 </tr>
+                
+            <tr><td><input type="button" value="check"></td></tr>
+            
+            </table>
+</div>
+        <div class="checkyes" style="display: none">
+            <h1>CORRECT</h1>
+        
+        </div>
+        
+        <div class="checkno" style="display: none">
+            <h1>INCORRECT</h1>
+        </div>
+        
+        <h2 id="kontagailua">CORRECT:</h2>
+      
+        </body>
+
+</html>

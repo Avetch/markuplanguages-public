@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>exercise 3</title>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript">
+            var counter=0;
+            
+            $(document).ready(function(){
+                $("h1").click(function(){
+                    if (counter==0){
+                        
+                    $("#surprise").html("<img src=images/1.jpg width=400px hight=400px/>");
+                        counter++;
+                        }
+                    else {
+                    $("#surprise").html("");
+                        counter--;
+                        
+                    }
+                    
+                });
+                
+            });         
+                
+                
+    </script>
+    </head>
+    
+    <body>
+        <h1>Click here to get a surprise...</h1>
+        <div id="surprise"></div>
+    
+    
+    </body>
+
+
+</html>

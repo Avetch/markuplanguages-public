@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise</title>
+    <style>
+        li{
+            border: 1px solid black;
+            list-style: none;
+            width: 100px;
+            background-color: grey;
+            
+        }
+        ul{
+            text-align: left;
+        }
+
+     </style>
+    
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script type=text/javascript>
+    $(document).ready(function(){
+        
+        $("li").click(function(){
+            var display_value=$(this).next().css("display");
+            
+            if (display_value=="none"){
+                $(this).next().show();
+            }
+            else{
+                $(this).next().hide();
+            }
+            });
+    });
+        </script>    
+</head>
+<body>
+    <ul>
+        <li>Panel 1</li>
+            <ul style="display: none">
+                <li>Panel 11</li>
+                <li>Panel 12</li>
+                <li>Panel 13</li>
+            
+            </ul>
+        <li>Panel 2</li>
+            <ul style="display: none">
+                <li>Panel 21</li>
+                <li>Panel 22</li>
+                <li>Panel 23</li>
+            
+            </ul>
+        <li>Panel 3</li>
+            <ul style="display: none">
+                <li>Panel 31</li>
+                <li>Panel 32</li>
+                <li>Panel 33</li>
+            
+            </ul>
+        
+        
+</ul>
+</body>
+</html>

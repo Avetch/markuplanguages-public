@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+      <title>Enekos Library</title>
+          <link>www.enekosLibrary.com</link>
+          <description>This our oficial website</description>
+          <images>
+          <url></url>
+	      <link>http://www.enekosLibrary.com</link>
+	      <title>Bio image</title>
+	      <height>200</height>
+	      <width>400</width>
+          </images>
+          <item>
+			<title>News 1</title>
+			<description>This week we have a new offer for you!!</description>
+			<link>http://www.enekosLibrary/new1.com</link>
+			<pubDate>2016/05/12</pubDate>
+			
+			<category></category>
+		</item>
+		 <item>
+			<title>News 1</title>
+			<description>This is the first news</description>
+			<link>http://www.enekosLibrary/new2.com</link>
+			<pubDate>2016/05/12</pubDate>
+			
+			<category></category>
+		</item>
+		
+		
+	
+		
+  
+  </channel>
+</rss>

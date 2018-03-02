@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 4</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function(){
+            $("tr.odd").click(function(){
+                if($(this).attr(("bgcolor")=="white"));
+                $(this).css("bgcolor","grey");
+            });
+            $("tr.even").click(function(){
+                 if($(this).attr(("bgcolor")=="white"));
+                $(this).css("bgcolor","grey");
+            });
+            
+        });
+        
+    
+    
+    </script>
+</head>
+<body>
+    <h1>Greying lines</h1>
+    <table border="1px solid black" width="500px">
+        <tr><td backgoundcolor="white">line 1</td></tr>
+        <tr><td backgoundcolor="white">line 2</td></tr>
+        <tr><td backgoundcolor="white">line 3</td></tr>
+        <tr><td backgoundcolor="white">line 4</td></tr>
+        <tr><td backgoundcolor="white">line 5</td></tr>
+        <tr><td backgoundcolor="white">line 6</td></tr>
+        <tr><td backgoundcolor="white">line 7</td></tr>
+        <tr><td backgoundcolor="white">line 8</td></tr>
+        <tr><td backgoundcolor="white">line 9</td></tr>
+        <tr><td backgoundcolor="white">line 10</td></tr>
+     </table>
+    <table>
+    <tr><input type="button" value="odd" onclick="odd">
+        <input type="button" value="even" onclick="even">
+        
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,9 @@
+div, h1{
+    font-size: 60px;
+    color: black;
+    
+}
+div, p{
+    font-size: 90px;
+    color: yellow;
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TicTacTou V.2</title>
+        <style>
+            body{
+                background-image: url(../v2/images/back.jpg);
+                )
+            }
+        </style>
+        <script type="text/javascript">
+            // write here your global variables
+            var game_over=0;
+            
+            var counter=0;
+            
+            var board= new Array(9);
+             for (i=0; i<9; i++){
+            board[i]="";
+               
+                
+            }
+            
+            
+            function play_again(){
+            // global variables to 0
+            game_over=0;
+             counter=0;
+            //loop through array 0 to 8 and empty
+            for (i=0; i<9; i++){
+            board[i]="";
+               document.getElementById(i).innerHTML="";
+                
+            }
+                
+            }
+            
+            
+            
+            
+            function check_winner(){
+                /*victory conditions
+                0,1,2 all o or x
+                3,4,5 all o or x
+                6,7,8 all o or x
+                
+                0,3,6 all o or x
+                1,2,7 all o or x
+                2,5,8 all o or x
+                
+                0,4,8 all o or x
+                2,4,6 all o or x
+                */
+                
+                var winner="";
+                //horizontal lines
+                if(board[0]=="X" && board[1]=="X" && board[2]=="X")
+                    {
+                        winner="X";
+                    }
+                if(board[3]=="X" && board[4]=="X" && board[5]=="X")
+                    {
+                        winner="X";
+                    }
+                if(board[6]=="X" && board[7]=="X" && board[8]=="X")
+                    {
+                        winner="X";
+                    }
+                //vertical columns
+                 if(board[0]=="X" && board[3]=="X" && board[6]=="X")
+                    {
+                        winner="X";
+                    }
+                if(board[1]=="X" && board[4]=="X" && board[7]=="X")
+                    {
+                        winner="X";
+                    }
+                if(board[2]=="X" && board[5]=="X" && board[8]=="X")
+                    {
+                        winner="X";
+                    }
+                //orizontal lines
+                 if(board[0]=="X" && board[4]=="X" && board[8]=="X")
+                    {
+                        winner="X";
+                    }
+                
+                 if(board[2]=="X" && board[4]=="X" && board[6]=="X")
+                    {
+                        winner="X";
+                    }
+                
+                
+                
+            
+            //horizontal lines
+                if(board[0]=="O" && board[1]=="O" && board[2]=="O")
+                    {
+                        winner="O";
+                    }
+                if(board[3]=="O" && board[4]=="O" && board[5]=="O")
+                    {
+                        winner="O";
+                    }
+                if(board[6]=="O" && board[7]=="O" && board[8]=="O")
+                    {
+                        winner="O";
+                    }
+                //vertical columns
+                 if(board[0]=="O" && board[3]=="O" && board[6]=="O")
+                    {
+                        winner="O";
+                    }
+                if(board[1]=="O" && board[4]=="O" && board[7]=="O")
+                    {
+                        winner="O";
+                    }
+                if(board[2]=="O" && board[5]=="O" && board[8]=="O")
+                    {
+                        winner="O";
+                    }
+                //orizontal lines
+                 if(board[0]=="O" && board[4]=="O" && board[8]=="O")
+                    {
+                        winner="O";
+                    }
+                
+                 if(board[2]=="O" && board[4]=="O" && board[6]=="O")
+                    {
+                        winner="O";
+                    }
+                
+                
+                if(winner!=""){
+                document.getElementById("win").innerHTML="<h2>"+winner+"player wins!</h2>";
+                    game_over=1;
+                    }
+                
+                
+            }
+            
+            function press_cell(position){
+                
+                // if game is not over execute this function
+                //if the board position is empty 
+                // check which playes turn is it
+                // put x or o in the array
+                // create the x or o images in the cell position
+                //update counter
+                //update game over if counter is 9
+                //call tyeh check winner function
+                
+                if(game_over==0){
+                    
+                    if(board[position]==""){
+                        
+                        var player="";
+                        
+                        if(counter%2==0){
+                            player="O";
+                        }else{
+                            player="X";
+                        }
+                        board[position]=player;
+                        
+                        document.getElementById(position).innerHTML="<img src='images/"+player+".jpg' width='238px' height='241px'/>";
+                        counter++;
+            
+                        if(counter==9){
+                            game_over=1;
+                            
+                        }
+                        check_winner();
+                        
+                    }
+                    
+                }
+                
+            }
+            
+                
+            
+            
+            
+        </script>
+    
+    </head>
+<body>
+        <h1>Tic Tac Toe version 2</h1>
+        <div id="win"></div>
+        
+        <table border="1px solid black" width="1000px" height="1000px">
+        <tr>
+        <td id="0" width="238px" height="241px" onclick="press_cell(0)"></td>
+        <td id="1" width="238px" height="241px" onclick="press_cell(1)"></td>
+        <td id="2" width="238px" height="241px" onclick="press_cell(2)"></td>
+        </tr>
+         <tr>
+        <td id="3" width="238px" height="241px" onclick="press_cell(3)"></td>
+        <td id="4" width="238px" height="241px" onclick="press_cell(4)"></td>
+        <td id="5" width="200px" height="241px" onclick="press_cell(5)"></td>
+        </tr>
+         <tr>
+        <td id="6" width="238px" height="241px" onclick="press_cell(6)"></td>
+        <td id="7" width="238px" height="241px" onclick="press_cell(7)"></td>
+        <td id="8" width="238px" height="241px" onclick="press_cell(8)"></td>
+        </tr>
+            
+        </table>
+        <tr><td><input type="button" value="reset" onclick="play_again()"/></td></tr>
+    
+    </body>
+</html>

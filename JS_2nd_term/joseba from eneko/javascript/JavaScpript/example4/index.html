@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title></title>
+        <script type="text/javascript">
+            function add_a_lot_of_lines(){
+                var howmanylines = document.getElementById("lines").value;
+                
+                
+            
+            for(i =0; i <= howmanylines; i++)
+                
+                    var delay=1000;
+                    setTimeout(function()
+                               
+                var element = document.createElement("p");
+                var Text = document.createTextNode ("line number " +i);
+                element.appendChild(text);
+                document.getElementById("write_here").appendChild(element);
+                
+        
+        
+                
+                                                                        
+            
+            , 1000);}
+        
+        
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+        <p>Choose a number</p></td>
+        <td><input type="number" min="0" max="100" id="lines"></td>
+        <td><input type="button" value="Go!" onclick="add_a_lot_of_lines()"></td>
+        </tr>
+        </table>
+    <div id="write_here">
+        </div>
+    </body>
+
+</html>

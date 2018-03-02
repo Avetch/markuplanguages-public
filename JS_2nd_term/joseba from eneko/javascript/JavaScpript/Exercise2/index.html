@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello World!</title>
+        <script type="text/javascript">
+            function hello(){
+                
+                /*
+                    1.- Retrieve name from text box
+                    2.- Write the HTML code into the emty div
+                */
+            var name=document.getElementById("name").value;
+            document.getElementById("box").innerHTML= "<h1> Hi "+name+"! Welcome to madness!</h1>";
+            
+            }
+        
+        </script>
+        
+    </head>
+    <body>
+        <p>Hi! Who the fuck are you?</p>
+        <input type="text" id="name" placeholder="Write your name here"/><input type="button" value="Go!" onclick="hello()"/>
+        <div id="box"></div>
+       
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Catalog</title>
+        <script style="text/javascript">
+            function createtable(){
+             var categories = document.getElementById("catinput").value;
+             
+                }
+            
+            function changeimage(categories_img_id){
+            document.getElementById("catinput").setAttribute("src","image/"categories_img_id".jpg");
+                }
+           </script>
+        </head>
+    
+    <body>
+        <h1>Product Catalog</h1>
+ <input list="categories" id="catinput" oninput="changeimage()">
+        <datalist id="categories">
+            <option value="computers" id="computer"/>
+            <option value="tablets" id="tablet"/>
+            <option value="videogames" id="videogames"/>
+        </datalist>
+        
+          <div id=table>
+        
+        <table>
+            <td colspan="4"><img src="images/" width="400" height="400" onclick="changeimage('11')"/>
+            
+            </td>
+               <tr> 
+            <td><img src="images/" width=100px height=100px onclick="changeimage('11')"/></td>
+            <td><img src="images/" width=100px height=100px onclick="changeimage('12')"/></td>
+            <td><img src="images/" width=100px height=100px onclick="changeimage('13')"/></td>
+            <td><img src="images/" width=100px height=100px onclick="changeimage('21')"/></td>
+           </tr> 
+        <tr>
+            <td><img src="images/" width=100px height=100px onclick="changeimage('22')"/></td>
+            <td><img src="images/" width=100px height=100px onclick="changeimage('23')"/></td>
+            <td><img src="images/" width=100px height=100px onclick="changeimage('31')"/></td>
+            <td><img src="images/" width=100px height=100px onclick="changeimage('32')"/></td>
+        </tr>
+    </table>
+            </div>
+     </body>
+    </html>

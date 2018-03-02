@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NOUGHTS AND CROSSES</title>
+                        
+        <script type="text/javascript">
+           var counter=9;
+            var i;
+            var x = 0;
+           function aldatzeko(posizio){
+                
+               
+                   if (posizio== 0){
+                       x++;
+                       var zenbakia = x % 2;
+                       if (zenbakia == 0){
+                        document.getElementById("background1").src= "images/O.jpg";
+                       }
+                       else {
+                           document.getElementById("background1").src = "images/X.jpg";
+                       }
+                       
+                   }
+               
+               if( posizio == 1){
+                   document.getElementById("background2").src = "images/X.jpg";
+                     x++;
+                       var zenbakia = x % 2;
+                       if (zenbakia == 0){
+                        document.getElementById("background2").src= "images/O.jpg";
+                       }else{
+                           document.getElementById("background2").src = "images/X.jpg";
+                       }
+               }
+               
+                if( posizio == 2){
+                   document.getElementById("background3").src = "images/X.jpg";
+                      x++;
+                       var zenbakia = x % 2;
+                       if (zenbakia == 0){
+                        document.getElementById("background3").src= "images/O.jpg";
+                       }else{
+                           document.getElementById("background3").src = "images/X.jpg";
+                       }
+               }
+               
+                if( posizio == 3){
+                   document.getElementById("background4").src = "images/X.jpg";
+                      x++;
+                       var zenbakia = x % 2;
+                       if (zenbakia == 0){
+                        document.getElementById("background4").src= "images/O.jpg";
+                       }else{
+                           document.getElementById("background4").src = "images/X.jpg";
+                       }
+               }
+               
+                if( posizio == 4){
+                   document.getElementById("background5").src = "images/X.jpg";
+                      x++;
+                       var zenbakia = x % 2;
+                       if (zenbakia == 0){
+                        document.getElementById("background5").src= "images/O.jpg";
+                       }else{
+                           document.getElementById("background5").src = "images/X.jpg";
+                       }
+               }
+               
+                if( posizio == 5){
+                   document.getElementById("background6").src = "images/X.jpg";
+                      x++;
+                       var zenbakia = x % 2;
+                       if (zenbakia == 0){
+                        document.getElementById("background6").src= "images/O.jpg";
+                       }else{
+                           document.getElementById("background6").src = "images/X.jpg";
+                       }
+               }
+               
+                if( posizio == 6){
+                   document.getElementById("background7").src = "images/X.jpg";
+                      x++;
+                       var zenbakia = x % 2;
+                       if (zenbakia == 0){
+                        document.getElementById("background7").src= "images/O.jpg";
+                       }else{
+                           document.getElementById("background7").src = "images/X.jpg";
+                       }
+               }
+               
+                if( posizio == 7){
+                   document.getElementById("background8").src = "images/X.jpg"; 
+                      x++;
+                       var zenbakia = x % 2;
+                       if (zenbakia == 0){
+                        document.getElementById("background8").src= "images/O.jpg";
+                       }else{
+                           document.getElementById("background8").src = "images/X.jpg";
+                       }
+               }
+               
+                if( posizio == 8){
+                   document.getElementById("background9").src = "images/X.jpg";
+                      x++;
+                       var zenbakia = x % 2;
+                       if (zenbakia == 0){
+                        document.getElementById("background9").src= "images/O.jpg";
+                       }else{
+                           document.getElementById("background9").src = "images/X.jpg";
+                       }
+               }
+               
+               
+               
+            } 
+            
+            function berrabiarazi(){
+                    window.location.href = "index.html";
+            }
+                     
+            
+        </script>
+    </head>
+    
+    <body>
+        <h1>This is a noughts and crosses game, play vs other player!!</h1>
+        
+        <table border="1px solid black" width="500px" height="500px">
+        <tr>
+        <td id="00" width="200px" height="200px" ><img id="background1" src="images/back.jpg" width="200px" height="200px" onclick="aldatzeko(0)"/></td>
+        <td id="01" width="200px" height="200px"><img id="background2" src="images/back.jpg" width="200px" height="200px" onclick="aldatzeko(1)"/></td>
+        <td id="02" width="200px" height="200px"><img id="background3" src="images/back.jpg" width="200px" height="200px" onclick="aldatzeko(2)"/></td>
+        </tr>
+         <tr>
+        <td id="10" width="200px" height="200px"><img id="background4" src="images/back.jpg" width="200px" height="200px" onclick="aldatzeko(3)"/></td>
+        <td id="11" width="200px" height="200px"><img id="background5" src="images/back.jpg" width="200px" height="200px" onclick="aldatzeko(4)"/></td>
+        <td id="12" width="200px" height="200px"><img id="background6" src="images/back.jpg" width="200px" height="200px" onclick="aldatzeko(5)"/></td>
+        </tr>
+         <tr>
+        <td id="20" width="200px" height="200px"><img id="background7" src="images/back.jpg" width="200px" height="200px" onclick="aldatzeko(6)"/></td>
+        <td id="21" width="200px" height="200px"><img id="background8" src="images/back.jpg" width="200px" height="200px" onclick="aldatzeko(7)"/></td>
+        <td id="22" width="200px" height="200px"><img id="background9" src="images/back.jpg" width="200px" height="200px" onclick="aldatzeko(8)"/></td>
+        </tr>
+            
+        </table>
+        <tr><td><input type="button" value="reset" onclick="berrabiarazi()"/></td></tr>
+    
+    </body>
+</html>

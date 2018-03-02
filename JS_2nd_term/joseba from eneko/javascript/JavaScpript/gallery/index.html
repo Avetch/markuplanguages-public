@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <title>Gallery</title>
+        <script type="text/javascript">
+            function changeimage(img_id){
+                document.getElementById("big").setAttribute("src","images/"+img_id+".jpg");
+            }
+        
+        
+        </script>
+    </head>
+    
+    <body>
+        <h1>Gallery</h1>
+        <h5>The image on the main cell must change when moving over the thumbnails</h5>
+        <div id=table>
+        
+        <table>
+            <td colspan="4"><img src="images/11.jpg" width="400" height="400" id="big"/>
+            
+            </td>
+               <tr> 
+
+            <td><img src="images/11.jpg" width=100px height=100px onclick="changeimage('11')"/></td>
+            <td><img src="images/12.jpg" width=100px height=100px onclick="changeimage('12')"/></td>
+            <td><img src="images/13.jpg" width=100px height=100px onclick="changeimage('13')"/></td>
+            <td><img src="images/21.jpg" width=100px height=100px onclick="changeimage('21')"/></td>
+           </tr> 
+        <tr>
+        
+    
+            <td><img src="images/22.jpg" width=100px height=100px onclick="changeimage('22')"/></td>
+            <td><img src="images/23.jpg" width=100px height=100px onclick="changeimage('23')"/></td>
+            <td><img src="images/31.jpg" width=100px height=100px onclick="changeimage('31')"/></td>
+            <td><img src="images/32.jpg" width=100px height=100px onclick="changeimage('32')"/></td>
+            
+        </tr>
+    </table>
+            </div>
+    </body>
+</html>

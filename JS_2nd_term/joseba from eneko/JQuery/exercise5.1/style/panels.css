@@ -1,0 +1,15 @@
+ul{
+    border: 1px solid black;
+    width: 50px;
+    
+    
+}
+table{
+    margin-left: 10px;
+}
+li{
+    list-style-type: none;
+    margin-left: 10px;
+    border: 1px solid black;
+    width: 60px;
+}

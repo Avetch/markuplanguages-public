@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GUESS THE NUMBER GAME</title>
+        <script type="text/javascript">
+            
+            var number_to_be_guess = Math.floor(Math.random()*100)+1 ;
+            
+            
+            var tries=0;
+            
+            function check_the_number(){
+                
+                var my_number = document.getElementByid("my_number").value;
+            
+            
+                if(my_number==number_to_be_guess){
+                    alert("You Guess it");
+                }
+                else if(my_number<number_to_be_guess){
+                    alert("your number is smaller");
+                }
+                else{
+                    alert("Your number is bigger");
+                }
+                
+                tries++;
+            
+                document.getElementByid("tries").innerHTML=tries;
+                
+                function reset(){
+                    
+                    var number_to_be_guess = Math.floor(Math.random()*100)+1;
+                    document.getElementByid("tries").innerHTML=tries;}
+                    
+            }
+                
+            
+            
+            
+        </script>
+    </head>
+    
+    <body>
+        <center>
+        <h1> Guess The Number Game</h1>
+        <p>Type a number and try to guess the hidden number...</p>
+        
+        <input type=number min=1 max=100 id=my_number value=0>
+        
+        <input type="button" value="Try to guess the number" onclick="check_the_number()" >
+            <input type=reset value=reset onclick=reset()>
+            
+            
+        <h2 >#TRIES</h2>
+            <div id=tries></div>
+            </center>
+    </body>
+
+
+</html>

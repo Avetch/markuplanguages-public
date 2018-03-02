@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio cartas oros del as al siete</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="styles/examen.css"/>
+        <style>
+            /*  estilos  */
+            
+
+
+        </style>
+
+
+        <script>
+            //Global variables
+          
+            var n1 = 0;
+            var n2 = 0;
+
+            function draw_card(Both){
+                
+                    var randomCard = Math.floor(Math.random() * 10) + 1;
+                        
+                        
+
+                    var actualimageid = "";
+                    if (Both == 'player') {
+                        n1 = parseInt(randomCard);
+                        actualimageid = "imageid";
+                    } else {
+                        actualimageid = "imageidC";
+                        n2 = parseInt(randomCard);
+                    }
+
+                    if (randomCard == 1) {
+                        document.getElementById(actualimageid).src= "images/img_1.jpg" ;    
+                    } else if (randomCard == 2){
+                        document.getElementById(actualimageid).src= "images/img_2.jpg" ;
+                    } else if (randomCard == 3){
+                        document.getElementById(actualimageid).src= "images/img_3.jpg" ;
+                    } else if (randomCard == 4){
+                        document.getElementById(actualimageid).src= "images/img_4.jpg" ;
+                    } else if (randomCard == 5){
+                        document.getElementById(actualimageid).src= "images/img_5.jpg" ;
+                    } else if (randomCard == 6){
+                        document.getElementById(actualimageid).src= "images/img_6.jpg";
+                    } else if (randomCard == 7){
+                        document.getElementById(actualimageid).src= "images/img_7.jpg";
+                    }
+
+             if (n1 > 0 && n2 > 0) {
+                if(n1>n2) {
+                    alert("Congratulations Player 1 wins!")
+                }else if (n1<n2){
+                    alert("Congratulations Player 2 wins!")
+                }else{
+                    alert("It's a tie!")
+                }       
+             }
+            };
+
+        </script>
+    </head>
+    <body>
+        <header>
+            <div id="logo"></div>
+            <div id="title">Cards Game</div>
+        </header>
+        <section>
+            <div id="Card1">
+                <table border="1">
+                    <tr>
+                    <div id="Pl"></div>
+                         <td id="playercounter">0</td>
+                         <h2>Player</h2>
+                         <td id="playercard"><img id="imageid" src="images/reves.jpg" width="200px;" height="300px;"></td>
+                    </div>
+                         <td><img src="images/versus.jpg"  width="200px;" height="300px;"></td>
+                         <td id="computercard"><img id = "imageidC" src="images/reves.jpg"  width="200px;" height="300px;"></td>
+                         <td id="computercounter">0</td>
+                         
+                    </tr>
+            </div>
+            
+                    <tr>
+                            <td id="Winner"></td>
+                             <td><input type="button" value="Draw Cards" onclick="draw_card('player')">
+
+                                <td id="Winner"></td>
+                    <td><input type="button" value="Draw Card" onclick="draw_card('computer')">
+                    </tr>         
+                
+        <!--Escribe aqui el código HTML5 para el juego -->
+
+
+        
+        </section>
+        <footer></footer>
+    </body>
+</html>

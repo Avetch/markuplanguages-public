@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Extra exercise</title>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#1").click(function(){
+                    $("#english").show();
+                    $("#euskara").hide();
+                    $("#gaztelania").hide();
+                    $("#coreano").hide();
+                    
+                });
+            
+            
+                $("#2").click(function(){
+                    $("#euskara").show();
+                    $("#english").hide();
+                    $("#gaztelania").hide();
+                    $("#coreano").hide();
+                });
+           
+            
+                $("#3").click(function(){
+                    $("#gaztelania").show();
+                    $("#euskara").hide();
+                    $("#english").hide();
+                    $("#coreano").hide();
+                });
+                $("#4").click(function(){
+                    $(location).attr("href","kimjongun.html")
+                });
+            });
+            
+           
+        
+        
+        
+        </script>
+    
+    </head>
+    <body>
+        <h1>Choose the language</h1>
+        <p id="english" style="display: none"> this a english web page this a english web page vthis a english web page this a english web pagethis a english web pagethis a english web pagethis a english web pagethis a english web pagethis a english web pagethis a english web pagethis a english web pagethis a english web pagethis a english web pagethis a english web pagethis a english web pagethis a english web pagethis a english web pagethis a english web pagethis a english web pagethis a english web pagethis a english web page</p>
+        <p id="euskara" >Hau euskarazko orrialde bat da Hau euskarazko orrialde bat da Hau euskarazko orrialde bat daHau euskarazko orrialde bat da Hau euskarazko orrialde bat daHau euskarazko orrialde bat daHau euskarazko orrialde bat daHau euskarazko orrialde bat daHau euskarazko orrialde bat daHau euskarazko orrialde bat daHau euskarazko orrialde bat daHau euskarazko orrialde bat daHau euskarazko orrialde bat daHau euskarazko orrialde bat daHau euskarazko orrialde bat da</p>
+        <p id="gaztelania" style="display: none">Esta es una simple pagina web Esta es una simple pagina web Esta es una simple pagina web Esta es una simple pagina web Esta es una simple pagina web Esta es una simple pagina web Esta es una simple pagina web Esta es una simple pagina web Esta es una simple pagina web Esta es una simple pagina web v Esta es una simple pagina web v Esta es una simple pagina web Esta es una simple pagina web Esta es una simple pagina web Esta es una simple pagina web Esta es una simple pagina web Esta es una simple pagina web Esta es una simple pagina web Esta es una simple pagina web</p>
+        <p id="coreano" style="display: none"></p>
+        <input type="button" value="english" id="1">
+        <input type="button" value="euskara" id="2">
+        <input type="button" value="castellano" id="3">
+        <input type="button" value="kim jong un" id="4">
+    </body>
+</html>

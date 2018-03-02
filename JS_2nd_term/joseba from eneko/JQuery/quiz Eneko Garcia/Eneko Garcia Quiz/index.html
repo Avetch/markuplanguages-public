@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survey</title>
+        <meta charset="iso-8859-1" />
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript">
+           var points = 0
+        $(document).ready(function () {
+            $("input[value='Go!']").click(function () {
+                if ($(this).parent().find("input[value='correct']").is(":checked")) {
+                    $(this).parent().hide();
+                    $(this).parent().next().animate({
+                        height: 'toggle'
+                    }, "slow"); points++;
+                    $("#points").html("<h2>You have "+points+" points</h2>")
+                    
+                }
+                else {
+                    $(this).parent().hide();
+                    $(this).parent().next().next().animate({
+                        height: 'toggle'
+                    }, "slow");
+                }
+            })
+            
+            $("input[value='reset']").click(function(){
+               
+                $(".correct").hide();
+                $(".wrong").hide();
+                $(".question").show();
+                 $("input[type='radio']").prop("checked",false);
+                    points=0; $("#points").html("<h2>You have "+points+" points</h2>")       
+            })
+            
+        })
+                         
+        
+           
+        </script>
+    
+    </head>
+    
+    <body>
+        <div>
+        <h2>Question 1: Number of employees in Apple?</h2>
+            <div class="question">
+        <table>
+                <tr>
+                <td>
+                <input type="radio"  value="yes" class="no">1    
+                </td>
+                </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="yes">115000   
+                </td>
+                 </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="no"> Apple  doesn´t exist 
+                </td>
+                 </tr>
+            <tr><td><input type="button" value="check" class="botoia"></td></tr>
+            
+            
+            </table>
+        </div>
+        <div class="correct" style="display: none">
+            <h1>CORRECT</h1>
+        
+        </div>
+        
+        <div class="incorrect" style="display: none">
+            <h1>INCORRECT</h1>
+        </div>
+        <div>
+            <h2>Question 2: When die Napoleon?</h2>
+            <table>
+                <tr>
+                <td>
+                <input type="radio"  value="yes" class="no">1600    
+                </td>
+                </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="yes">1821   
+                </td>
+                 </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="no">1601 
+                </td>
+                 </tr>
+                
+            <tr><td><input type="button" value="check" class="botoia"></td></tr>
+            
+            </table>
+        </div>
+          <div class="yes" style="display: none">
+            <h1>CORRECT</h1>
+        
+        </div>
+        
+        <div class="no" style="display: none">
+            <h1>INCORRECT</h1>
+        </div>
+        <div>
+            <h2>Question 3: Best OS?</h2>
+            <table>
+                <tr>
+                <td>
+                <input type="radio"  value="yes" class="yes">Windows    
+                </td>
+                </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="no">Linux    
+                </td>
+                 </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="no">Android  
+                </td>
+                 </tr>
+                
+            <tr><td><input type="button" value="check" class="botoia"></td></tr>
+            
+            </table>
+            </div>
+        <div class="yes" style="display: none">
+            <h1>CORRECT</h1>
+        
+        </div>
+        
+        <div class="no" style="display: none">
+            <h1>INCORRECT</h1>
+        </div>
+        
+        <div>
+            <h2>Question 4: Homer´s son is?</h2>
+            <table>
+                <tr>
+                <td>
+                <input type="radio"  value="yes" class="no">Apu    
+                </td>
+                </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="yes">Bart   
+                </td>
+                 </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="no">Moe  
+                </td>
+                 </tr>
+                
+            
+            <tr><td><input type="button" value="check" class="botoia"></td></tr>
+            </table>
+        </div>
+         <div class="yes" style="display: none">
+            <h1>CORRECT</h1>
+        
+        </div>
+        
+        <div class="no" style="display: none">
+            <h1>INCORRECT</h1>
+        </div>
+        <div>
+            <h2>Question 5: We cant...</h2>
+            <table>
+                <tr>
+                <td>
+                <input type="radio"  value="yes" class="no">Run    
+                </td>
+                </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="no">die    
+                </td>
+                 </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="yes">Fly  
+                    </td>
+                 </tr>
+                
+            
+            <tr><td><input type="button" value="check" class="botoia"></td></tr>
+            </table>
+    </div>
+         <div class="yes" style="display: none">
+            <h1>CORRECT</h1>
+        
+        </div>
+        
+        <div class="no" style="display: none">
+            <h1>INCORRECT</h1>
+        </div>
+        <div>
+            <h2>Question 6: Pablo Escobar was from</h2>
+            <table>
+                <tr>
+                <td>
+                <input type="radio"  value="yes" class="yes">Colombia   
+                </td>
+                </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="no">Chile    
+                </td>
+                 </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="no">Germany  
+                </td>
+                 </tr>
+                
+            <tr><td><input type="button" value="check" class="botoia"></td></tr>
+            
+            </table>
+</div>
+         <div class="yes" style="display: none">
+            <h1>CORRECT</h1>
+        
+        </div>
+        
+        <div class="no" style="display: none">
+            <h1>INCORRECT</h1>
+        </div>
+        <div>
+            <h2>Question 7: Is this Question 7?</h2>
+            <table>
+                <tr>
+                <td>
+                <input type="radio"  value="yes" class="yes">yes    
+                </td>
+                </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="no">no    
+                </td>
+                 </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="no">maybe 
+                </td>
+                 </tr>
+                
+            <tr><td><input type="button" value="check" class="botoia"></td></tr>
+            
+            </table>
+</div>
+         <div class="yes" style="display: none">
+            <h1>CORRECT</h1>
+        
+        </div>
+        
+        <div class="no" style="display: none">
+            <h1>INCORRECT</h1>
+        </div>
+        <div>
+            <h2>Question 8: Where die Paul Walker?</h2>
+            <table>
+                <tr>
+                <td>
+                <input type="radio"  value="yes" class="yes">Valencia, California   
+                </td>
+                </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="no">New York    
+                </td>
+                 </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="no">Canada  
+                </td>
+                 </tr>
+                
+            <tr><td><input type="button" value="check" class="botoia"></td></tr>
+            
+            </table>
+</div>
+         <div class="yes" style="display: none">
+            <h1>CORRECT</h1>
+        
+        </div>
+        
+        <div class="no" style="display: none">
+            <h1>INCORRECT</h1>
+        </div>
+        <div>
+            <h2>Question 9: World´s fastest car is?</h2>
+            <table>
+                <tr>
+                <td>
+                <input type="radio"  value="yes" class="yes">Hennessey Venom GT    
+                </td>
+                </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="no">Ford focus C-max    
+                </td>
+                 </tr>
+                
+                <tr>
+                <td>
+                <input type="radio"  value="no" class="no">Seat 600  
+                </td>
+                 </tr>
+                
+            <tr><td><input type="button" value="check" class="botoia"></td></tr>
+            
+            </table>
+</div>
+         <div class="yes" style="display: none">
+            <h1>CORRECT</h1>
+        
+        </div>
+        
+        <div class="no" style="display: none">
+            <h1>INCORRECT</h1>
+        </div>
+        
+        <h2 id="points">CORRECT:</h2>
+      
+        </body>
+
+</html>
