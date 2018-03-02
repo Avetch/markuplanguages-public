@@ -17,7 +17,7 @@
           
             var n1 = 0;
             var n2 = 0;
-
+            //This is going to generate randomly both cards
             function draw_card(Both){
                 
                     var randomCard = Math.floor(Math.random() * 10) + 1;
@@ -48,13 +48,13 @@
                     } else if (randomCard == 7){
                         document.getElementById(actualimageid).src= "images/img_7.jpg";
                     }
-
+                    //Here is the comparison part
              if (n1 > 0 && n2 > 0) {
-                if(n1>n2) {
+                    if(n1>n2) {
                     alert("Congratulations Player 1 wins!")
-                }else if (n1<n2){
+                    }else if (n1<n2){
                     alert("Congratulations Player 2 wins!")
-                }else{
+                    }else{
                     alert("It's a tie!")
                 }       
              }
@@ -67,6 +67,7 @@
             <div id="logo"></div>
             <div id="title">Cards Game</div>
         </header>
+        <!--This belongs to the reversal cards's part-->
         <section>
             <div id="Card1">
                 <table border="1">
@@ -82,7 +83,7 @@
                          
                     </tr>
             </div>
-            
+            <!--This belongs to the buttons's part-->
                     <tr>
                             <td id="Winner"></td>
                              <td><input type="button" value="Draw Cards" onclick="draw_card('player')">
