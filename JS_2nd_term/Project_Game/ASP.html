@@ -8,7 +8,8 @@
 
 <style>
 .JS{
-    background-image: url(Pacman.jpg);  
+    background-image: url(Pacman.jpg);
+    background-size: 90%;  
     border-style:solid;
     position:absolute;
     left: 500px;
@@ -40,6 +41,7 @@
             <div id="elementID" class="element"></div>
         </div>
         <h2 id='RT'></h2>
+        <img src="" id="Goku" width="1920px" heigth="1080px">
     <script>
         console.log("Hi");
         //init
@@ -153,7 +155,7 @@ for (var i = 0; i < 10; i++) {
 } 
 // This belongs to the timer part
  /* Total time we have to complete the game */
- var Remaining=600;
+ var Remaining=20;
     /* The url we want the page to go once the time finishes */
     var url="ASP.html";
  
@@ -174,11 +176,12 @@ for (var i = 0; i < 10; i++) {
     window.onload=updateclock;
     
     //Collision
- 
+    var Counter = 0;
     function detectCollisionWithAllElements(){
-
+        
     smcs = document.querySelectorAll(".element");
     smcs.forEach(function(Pum){
+        
             // https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
             var big = {x: x, y: y, width: bigCircle.offsetWidth, height: bigCircle.offsetHeight}
             var small = {x: Pum.offsetLeft, y: Pum.offsetTop, width: Pum.offsetWidth, height: Pum.offsetHeight}
@@ -191,17 +194,19 @@ for (var i = 0; i < 10; i++) {
                 // https://www.sitepoint.com/five-ways-to-hide-elements-in-css/
                 Pum.style.display = "none";
                 Increase();
+                Counter++;
             }
-        
+        if(Counter==11)
+        document.getElementById("Goku").src = "Goku.gif";
     });
 }
-
+ // This function will make the big ball get bigger size.
 function Increase(){
 
 var Tsquare = document.getElementById("Square");
 
-    Tsquare.style.width = Tsquare.offsetWidth + 10 + "px";
-    Tsquare.style.height = Tsquare.offsetHeight + 10 + "px";
+    Tsquare.style.width = Tsquare.offsetWidth + 5 + "px";
+    Tsquare.style.height = Tsquare.offsetHeight + 5 + "px";
 
 }
 
